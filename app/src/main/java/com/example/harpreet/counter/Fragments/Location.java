@@ -62,6 +62,7 @@ public class Location extends Fragment {
             String lat_longarr[]=ans.split(",");
            // Toast.makeText(getContext(), city_name, Toast.LENGTH_SHORT).show();
             creatingItem = new Adding(lat_longarr,getContext());
+            ((MainActivity)getActivity()).function();//added
         }
     }
 

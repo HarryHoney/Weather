@@ -1,5 +1,6 @@
 package com.example.harpreet.counter;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -75,14 +76,33 @@ public class MainActivity extends AppCompatActivity {
         //fragments are been set in the view pager
         fragments = new ArrayList<>();
         fragments.add(Location_fragment);
-        fragments.add(City_Fragment);
+       // fragments.add(City_Fragment);
         fragments.add(detail_fragment);
         com.example.harpreet.counter.PagerAdapter adapter1 = new com.example.harpreet.counter.PagerAdapter(getSupportFragmentManager(),fragments);
         viewPager = findViewById(R.id.main_container);
         viewPager.setAdapter(adapter1);
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(viewPager);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {
 
+            }
+
+            @Override
+            public void onPageSelected(int i) {
+             if(i==1)
+             {
+                 if(POSITION_data==null)
+                     function();
+             }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+
+            }
+        });
 
     }
 
@@ -111,16 +131,31 @@ public class MainActivity extends AppCompatActivity {
                         }
                             setupRecyclerView();
                             adapter.startListening();
-                            if(adapter.getSnapshots().size()==0){
-                                POSITION_data=null;
-                            }else{
-                                POSITION_data=adapter.getItem(1);
-                            }
+                        try {
+                            Thread.sleep(500);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        function();
                     }
                 }
             });
         }
     }
+
+    public void function() {
+        int size=adapter.getSnapshots().size();
+        if(size>0){
+            POSITION_data=adapter.getItem(0);
+        }else{
+            POSITION_data = null;
+        }
+        change_Data();
+    }
+    public void change_Data(){
+        detail_fragment.execute();
+    }
+
     @Override
     protected void onStop() {
         super.onStop();
@@ -196,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-        //this will be handling the swiping events
+        //this will be handling the swiping events for deleting items
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder viewHolder1) {
@@ -214,45 +249,7 @@ public class MainActivity extends AppCompatActivity {
            public void OnitemClick(DocumentSnapshot snapshot, int position) {
                Data data = snapshot.toObject(Data.class);
                POSITION_data=data;
-               /*
-               TextView one_low,one_high,one_day,condition,
-                       two_low,two_high,two_day,condition_two,
-                       three_low,three_high,three_day,condition_three,
-                       four_low,four_high,four_day,condition_four,
-                       five_low,five_high,five_day,condition_five,
-                       six_low,six_high,six_day,condition_six;
-               one_low = findViewById(R.id.one_low);
-               Toast.makeText(MainActivity.this, ""+one_low, Toast.LENGTH_SHORT).show();
-               //one_low.setText(data.getOne_temp_low());
-               one_high = findViewById(R.id.one_high);
-               one_day = findViewById(R.id.one_day);
-               condition = findViewById(R.id.condition_one);
-
-               two_day = findViewById(R.id.two_day);
-               two_high = findViewById(R.id.two_high);
-               two_low = findViewById(R.id.two_low);
-               condition_two = findViewById(R.id.condition_two);
-
-               three_day = findViewById(R.id.three_day);
-               three_high = findViewById(R.id.three_high);
-               three_low = findViewById(R.id.three_low);
-               condition_three = findViewById(R.id.condition_three);
-
-               four_day = findViewById(R.id.four_day);
-               four_high = findViewById(R.id.four_high);
-               four_low = findViewById(R.id.four_low);
-               condition_four = findViewById(R.id.condition_four);
-
-               five_day = findViewById(R.id.five_day);
-               five_high = findViewById(R.id.five_high);
-               five_low = findViewById(R.id.five_low);
-               condition_five = findViewById(R.id.condition_five);
-
-               six_day = findViewById(R.id.six_day);
-               six_high = findViewById(R.id.six_high);
-               six_low = findViewById(R.id.six_low);
-               condition_six = findViewById(R.id.condition_six);
-               */
+               change_Data();
            }
        });
 

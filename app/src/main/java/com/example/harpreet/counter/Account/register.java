@@ -70,7 +70,7 @@ public class register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful())
                                 {
-                                    startActivity(new Intent(register.this,setup.class));
+                                    startActivity(new Intent(register.this,MainActivity.class));
                                     finish();
                                 }
                                 else

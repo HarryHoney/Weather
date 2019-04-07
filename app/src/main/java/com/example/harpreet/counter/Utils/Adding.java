@@ -207,34 +207,6 @@ public class Adding {
                 map.put("six_text",six_text);
                 map.put("six_code",six_code);
 
-             //   Toast.makeText(context, "here", Toast.LENGTH_SHORT).show();
-
-//                Data object=new Data();
-//
-//                object.setCity(city);object.setCurrent_condition(current_condition);object.setCurrent_humidity(current_humidity);
-//                object.setCurrent_image(current_image);object.setCurrent_temp(current_temp);
-//                object.setDate(date);object.setWind(wind);
-//
-//                object.setOne_code(one_code);object.setOne_code(one_code);
-//                object.setOne_day(one_day);object.setOne_temp_high(one_temp_high);object.setOne_temp_low(one_temp_low);
-//                object.setOne_text(one_text);
-//
-//                object.setTwo_code(two_code);object.setTwo_day(two_day);object.setTwo_temp_high(two_temp_high);
-//                object.setTwo_temp_low(two_temp_low);object.setTwo_text(two_text);
-//
-//                object.setThree_code(three_code);
-//                object.setThree_day(three_day);object.setThree_temp_high(three_temp_high);object.setThree_temp_low(three_temp_low);
-//                object.setThree_text(three_text);
-//
-//                object.setFour_code(four_code);object.setFour_day(four_day);object.setFour_temp_high(four_temp_high);
-//                object.setFour_temp_low(four_temp_low);object.setFour_text(four_text);
-//
-//                object.setFive_code(five_code);object.setFive_day(five_day);
-//                object.setFive_temp_high(five_temp_high);object.setFive_text(five_text);object.setFive_temp_low(five_temp_low);
-//
-//                object.setSix_code(six_code);object.setSix_day(six_day);object.setSix_temp_high(six_temp_high);
-//                object.setSix_temp_low(six_temp_low);object.setSix_text(six_text);
-
                 //object is ready. Now all I need to do is put it to the firebase
                 FirebaseAuth mauth=FirebaseAuth.getInstance();
                 String Uid=mauth.getUid();
