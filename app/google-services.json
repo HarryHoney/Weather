@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "874424337636",
+    "firebase_url": "https://counter-77eda.firebaseio.com",
+    "project_id": "counter-77eda",
+    "storage_bucket": "counter-77eda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874424337636:android:748a4598b8f4c53c",
+        "android_client_info": {
+          "package_name": "com.example.harpreet.counter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874424337636-upkl3hlcg68ku92u25q721vbehj38d0s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.harpreet.counter",
+            "certificate_hash": "762d6f7a9f7ea4ebb8df150d6b2011fedbcc1eee"
+          }
+        },
+        {
+          "client_id": "874424337636-6pdjm8qkhgs2jv82gb440igk38fe8cui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1hvpYlNM0FH0ECwdYrfgk-GKcXKeEq2Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874424337636-6pdjm8qkhgs2jv82gb440igk38fe8cui.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

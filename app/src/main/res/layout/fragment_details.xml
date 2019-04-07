@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Details">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:background="@color/glass">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/glass">
+
+            <ImageView
+                android:id="@+id/one_image"
+                android:layout_width="81dp"
+                android:layout_height="66dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/a12" />
+
+            <TextView
+                android:id="@+id/one_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/one_image"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="29dp"
+                android:text="one_day" />
+
+            <TextView
+                android:id="@+id/one_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/one_image"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="138dp"
+                android:text="one_low" />
+
+            <TextView
+                android:id="@+id/one_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/one_low"
+                android:layout_centerVertical="true"
+                android:text="one_high" />
+
+            <TextView
+                android:id="@+id/condition_one"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="-61dp"
+                android:layout_toStartOf="@+id/one_day"
+                android:text="condtion" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:background="@color/glass"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/glass">
+
+            <ImageView
+                android:id="@+id/two_image"
+                android:layout_width="81dp"
+                android:layout_height="66dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/a12" />
+
+            <TextView
+                android:id="@+id/two_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/two_image"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="29dp"
+                android:text="one_day" />
+
+            <TextView
+                android:id="@+id/two_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/two_image"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="138dp"
+                android:text="one_low" />
+
+            <TextView
+                android:id="@+id/two_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/two_low"
+                android:layout_centerVertical="true"
+                android:text="one_high" />
+
+            <TextView
+                android:id="@+id/condition_two"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="-61dp"
+                android:layout_toStartOf="@+id/two_day"
+                android:text="condtion" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:background="@color/glass">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/glass">
+
+            <ImageView
+                android:id="@+id/three_image"
+                android:layout_width="81dp"
+                android:layout_height="66dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/a12" />
+
+            <TextView
+                android:id="@+id/three_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/three_image"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="29dp"
+                android:text="one_day" />
+
+            <TextView
+                android:id="@+id/three_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/three_image"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="138dp"
+                android:text="one_low" />
+
+            <TextView
+                android:id="@+id/three_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/three_low"
+                android:layout_centerVertical="true"
+                android:text="one_high" />
+
+            <TextView
+                android:id="@+id/condition_three"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="-61dp"
+                android:layout_toStartOf="@+id/three_day"
+                android:text="condtion" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:background="@color/glass"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/glass">
+
+            <ImageView
+                android:id="@+id/four_image"
+                android:layout_width="81dp"
+                android:layout_height="66dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/a12" />
+
+            <TextView
+                android:id="@+id/four_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/four_image"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="29dp"
+                android:text="one_day" />
+
+            <TextView
+                android:id="@+id/four_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/four_image"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="138dp"
+                android:text="one_low" />
+
+            <TextView
+                android:id="@+id/four_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/four_low"
+                android:layout_centerVertical="true"
+                android:text="one_high" />
+
+            <TextView
+                android:id="@+id/condition_four"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="-61dp"
+                android:layout_toStartOf="@+id/four_day"
+                android:text="condtion" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:background="@color/glass"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/glass">
+
+            <ImageView
+                android:id="@+id/five_image"
+                android:layout_width="81dp"
+                android:layout_height="66dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/a12" />
+
+            <TextView
+                android:id="@+id/five_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/five_image"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="29dp"
+                android:text="one_day" />
+
+            <TextView
+                android:id="@+id/five_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/five_image"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="138dp"
+                android:text="one_low" />
+
+            <TextView
+                android:id="@+id/five_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/five_low"
+                android:layout_centerVertical="true"
+                android:text="one_high" />
+
+            <TextView
+                android:id="@+id/condition_five"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="-61dp"
+                android:layout_toStartOf="@+id/five_day"
+                android:text="condtion" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:background="@color/glass"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/glass">
+
+            <ImageView
+                android:id="@+id/six_image"
+                android:layout_width="81dp"
+                android:layout_height="66dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/a12" />
+
+            <TextView
+                android:id="@+id/six_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/six_image"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="29dp"
+                android:text="one_day" />
+
+            <TextView
+                android:id="@+id/six_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/six_image"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="138dp"
+                android:text="one_low" />
+
+            <TextView
+                android:id="@+id/six_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/six_low"
+                android:layout_centerVertical="true"
+                android:text="one_high" />
+
+            <TextView
+                android:id="@+id/condition_six"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="-61dp"
+                android:layout_toStartOf="@+id/six_day"
+                android:text="condtion" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+</ScrollView>
