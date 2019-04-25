@@ -60,6 +60,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
+        TODO
+        1. Change Custom Layout to hold more data
+        2. Redundant data is been added to the firebase like mon is been added twice and there is no wed check the cloud function
+        3. Handle deleting events
+          */
+
         location = new SimpleLocation(this);
         mauth=FirebaseAuth.getInstance();
         main_toolbar=findViewById(R.id.toolbar);
