@@ -46,7 +46,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/one_image"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="138dp"
+                android:layout_marginStart="121dp"
+                android:layout_marginTop="1dp"
                 android:text="one_low" />
 
             <TextView

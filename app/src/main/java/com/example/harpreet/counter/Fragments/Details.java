@@ -14,13 +14,15 @@ import com.example.harpreet.counter.MainActivity;
 import com.example.harpreet.counter.R;
 import com.example.harpreet.counter.Utils.Data;
 
+import java.util.HashMap;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class Details extends Fragment {
 
-
+    HashMap<String , Integer> map = new HashMap<>();
     public Details() {
         // Required empty public constructor
     }
@@ -78,39 +80,91 @@ public class Details extends Fragment {
         return view;
     }
 
+    String limit(String str)
+    {
+        int limit;String s;
+        s="";
+        String ss=str;
+        limit=str.length();
+        if(limit>5)
+        {
+            for(int i=0;i<5;i++)
+                s=s+str.charAt(i);
+        }
+        else
+            s=ss;
+        return s;
+    }
     public void execute() {
         Data value = ((MainActivity)getActivity()).POSITION_data;
         if(value!=null) {
-            one_low.setText("Min Temp="+value.getOne_temp_low());
+
+            one_low.setText("Min Temp="+limit(value.getOne_temp_low()));
             one_day.setText(value.getOne_day());
-            one_high.setText("Max_Temp="+value.getOne_temp_high());
+            one_high.setText("Max Temp="+limit(value.getOne_temp_high()));
             condition.setText(value.getOne_text());
-            Toast.makeText(getContext(), value.getOne_code(), Toast.LENGTH_SHORT).show();
+            int resId = getActivity().getResources().getIdentifier(
+                    "a"+value.getOne_code(),
+                    "drawable",
+                    getActivity().getPackageName()
+            );
+            one_image.setImageResource(resId);
+           // Toast.makeText(getContext(), value.getOne_code(), Toast.LENGTH_SHORT).show();
 
-            two_low.setText("Min Temp="+value.getTwo_temp_low());
+            two_low.setText("Min Temp="+limit(value.getTwo_temp_low()));
             two_day.setText(value.getTwo_day());
-            two_high.setText("Max_Temp="+value.getTwo_temp_high());
+            two_high.setText("Max Temp="+limit(value.getTwo_temp_high()));
             condition.setText(value.getTwo_text());
+            resId = getActivity().getResources().getIdentifier(
+                    "a"+value.getTwo_code(),
+                    "drawable",
+                    getActivity().getPackageName()
+            );
+            two_image.setImageResource(resId);
 
-            three_low.setText("Min Temp="+value.getThree_temp_low());
+            three_low.setText("Min Temp="+limit(value.getThree_temp_low()));
             three_day.setText(value.getThree_day());
-            three_high.setText("Max_Temp="+value.getThree_temp_high());
+            three_high.setText("Max Temp="+limit(value.getThree_temp_high()));
             condition.setText(value.getThree_text());
+            resId = getActivity().getResources().getIdentifier(
+                    "a"+value.getThree_code(),
+                    "drawable",
+                    getActivity().getPackageName()
+            );
+            three_image.setImageResource(resId);
 
-            four_low.setText("Min Temp="+value.getFour_temp_low());
+            four_low.setText("Min Temp="+limit(value.getFour_temp_low()));
             four_day.setText(value.getFour_day());
-            four_high.setText("Max_Temp="+value.getFour_temp_high());
+            four_high.setText("Max Temp="+limit(value.getFour_temp_high()));
             condition.setText(value.getFour_text());
+            resId = getActivity().getResources().getIdentifier(
+                    "a"+value.getFour_code(),
+                    "drawable",
+                    getActivity().getPackageName()
+            );
+            four_image.setImageResource(resId);
 
-            five_low.setText("Min Temp="+value.getFive_temp_low());
+            five_low.setText("Min Temp="+limit(value.getFive_temp_low()));
             five_day.setText(value.getFive_day());
-            five_high.setText("Max_Temp="+value.getFive_temp_high());
+            five_high.setText("Max Temp="+limit(value.getFive_temp_high()));
             condition.setText(value.getFive_text());
+            resId = getActivity().getResources().getIdentifier(
+                    "a"+value.getFive_code(),
+                    "drawable",
+                    getActivity().getPackageName()
+            );
+            five_image.setImageResource(resId);
 
-            six_low.setText("Min Temp="+value.getSix_temp_low());
+            six_low.setText("Min Temp="+limit(value.getSix_temp_low()));
             six_day.setText(value.getSix_day());
-            six_high.setText("Max_Temp="+value.getSix_temp_high());
+            six_high.setText("Max Temp="+limit(value.getSix_temp_high()));
             condition.setText(value.getSix_text());
+            resId = getActivity().getResources().getIdentifier(
+                    "a"+value.getSix_code(),
+                    "drawable",
+                    getActivity().getPackageName()
+            );
+            six_image.setImageResource(resId);
 
     }}
     @Override
