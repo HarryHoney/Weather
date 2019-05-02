@@ -160,6 +160,8 @@ public class setup extends AppCompatActivity {
 
     private void doSomethingWithCroppedImage(Uri outputUri) {
         OuputUri=outputUri;
+        String s=outputUri.toString();
+        Toast.makeText(this,s, Toast.LENGTH_SHORT).show();
         circleImageView.setImageURI(outputUri);
     }
 
@@ -188,7 +190,8 @@ public class setup extends AppCompatActivity {
                     {
                         //Toast.makeText(setup.this, "here1", Toast.LENGTH_SHORT).show();
                         Uri download_uri=task.getResult().getUploadSessionUri();//in short getting the referal code where the image is been stored in storage
-                        //Toast.makeText(setup.this, "here2", Toast.LENGTH_SHORT).show();
+                        //actual fuction was getdownloaduri
+                       // Toast.makeText(setup.this, download_uri.toString(), Toast.LENGTH_SHORT).show();
                         HashMap<String,String> user_map=new HashMap<>();
                         user_map.put("Name",user_name);
                         user_map.put("Profile_Image",download_uri.toString());

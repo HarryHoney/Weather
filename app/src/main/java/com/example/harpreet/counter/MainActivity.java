@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     Location Location_fragment;
     City City_Fragment;
     Details detail_fragment;
-    private SimpleLocation location;//this libraray is added to get the gps or current location of the User
+    private SimpleLocation location;//this library is added to get the gps or current location of the User
     public static final int PLACERESULT = 722;
     public static String PACKAGE_NAME;
     //for adapter
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
             String userID;
             userID=mauth.getCurrentUser().getUid();
             FirebaseFirestore firebaseFirestore;
-            firebaseFirestore=FirebaseFirestore.getInstance();
+            firebaseFirestore=FirebaseFirestore.getInstance();//to access database
             firebaseFirestore.collection("Users").document(userID).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
-
+//this function is only for on start so that null is not been set as POSITION_data
     public void function() {
         int size=adapter.getSnapshots().size();
         if(size>0){
@@ -180,7 +180,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_menu,menu);
         return true;
-
     }
 
     @Override
@@ -204,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case(R.id.settings):
                 Toast.makeText(this, "Setting selected", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,setup.class));
                 //do something
                 return true;
             case (R.id.about_us):

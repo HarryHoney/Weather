@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.harpreet.counter.Fragments.City;
@@ -56,18 +57,13 @@ public class Adding {
         new JSONTask().execute(callingurl);
     }
 
-
-
-
-
-
-
     public class JSONTask extends AsyncTask<String,String,String> {
 
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
             try {
+               // Log.d("tag", result);
                 JSONObject jsonObject = new JSONObject(result);
                 String city = jsonObject.getString("city");
                 String current_temp = jsonObject.getString("current_temp");
@@ -91,21 +87,21 @@ public class Adding {
                 String three_temp_high = jsonObject.getString("three_temp_high");
                 String three_text = jsonObject.getString("three_text");
                 String three_code = jsonObject.getString("three_code");
-                String four_day = jsonObject.getString("two_day");
-                String four_temp_low = jsonObject.getString("two_temp_low");
-                String four_temp_high = jsonObject.getString("two_temp_high");
-                String four_text = jsonObject.getString("two_text");
-                String four_code = jsonObject.getString("two_code");
-                String five_day = jsonObject.getString("two_day");
-                String five_temp_low = jsonObject.getString("two_temp_low");
-                String five_temp_high = jsonObject.getString("two_temp_high");
-                String five_text = jsonObject.getString("two_text");
-                String five_code = jsonObject.getString("two_code");
-                String six_day = jsonObject.getString("two_day");
-                String six_temp_low = jsonObject.getString("two_temp_low");
-                String six_temp_high = jsonObject.getString("two_temp_high");
-                String six_text = jsonObject.getString("two_text");
-                String six_code = jsonObject.getString("two_code");
+                String four_day = jsonObject.getString("four_day");
+                String four_temp_low = jsonObject.getString("four_temp_low");
+                String four_temp_high = jsonObject.getString("four_temp_high");
+                String four_text = jsonObject.getString("four_text");
+                String four_code = jsonObject.getString("four_code");
+                String five_day = jsonObject.getString("five_day");
+                String five_temp_low = jsonObject.getString("five_temp_low");
+                String five_temp_high = jsonObject.getString("five_temp_high");
+                String five_text = jsonObject.getString("five_text");
+                String five_code = jsonObject.getString("five_code");
+                String six_day = jsonObject.getString("six_day");
+                String six_temp_low = jsonObject.getString("six_temp_low");
+                String six_temp_high = jsonObject.getString("six_temp_high");
+                String six_text = jsonObject.getString("six_text");
+                String six_code = jsonObject.getString("six_code");
 
                 Double value;
                 Double temp=Double.parseDouble(current_temp);
