@@ -3,6 +3,7 @@ package com.example.harpreet.counter.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,8 @@ import com.example.harpreet.counter.R;
 import com.example.harpreet.counter.Utils.Data;
 
 import java.util.HashMap;
+
+import static android.content.ContentValues.TAG;
 
 
 /**
@@ -96,8 +99,15 @@ public class Details extends Fragment {
         return s;
     }
     public void execute() {
-        Data value = ((MainActivity)getActivity()).POSITION_data;
-        if(value!=null) {
+        Data value=null;
+        try {
+            value = ((MainActivity) getActivity()).POSITION_data;
+        }
+        catch (NullPointerException e)
+        {
+            Log.d(TAG, "Null POSITION_Data");
+        }
+        if(value != null) {
 
             one_low.setText("Min Temp="+limit(value.getOne_temp_low()));
             one_day.setText(value.getOne_day());
@@ -114,7 +124,7 @@ public class Details extends Fragment {
             two_low.setText("Min Temp="+limit(value.getTwo_temp_low()));
             two_day.setText(value.getTwo_day());
             two_high.setText("Max Temp="+limit(value.getTwo_temp_high()));
-            condition.setText(value.getTwo_text());
+            condition_two.setText(value.getTwo_text());
             resId = getActivity().getResources().getIdentifier(
                     "a"+value.getTwo_code(),
                     "drawable",
@@ -125,7 +135,7 @@ public class Details extends Fragment {
             three_low.setText("Min Temp="+limit(value.getThree_temp_low()));
             three_day.setText(value.getThree_day());
             three_high.setText("Max Temp="+limit(value.getThree_temp_high()));
-            condition.setText(value.getThree_text());
+            condition_three.setText(value.getThree_text());
             resId = getActivity().getResources().getIdentifier(
                     "a"+value.getThree_code(),
                     "drawable",
@@ -136,7 +146,7 @@ public class Details extends Fragment {
             four_low.setText("Min Temp="+limit(value.getFour_temp_low()));
             four_day.setText(value.getFour_day());
             four_high.setText("Max Temp="+limit(value.getFour_temp_high()));
-            condition.setText(value.getFour_text());
+            condition_four.setText(value.getFour_text());
             resId = getActivity().getResources().getIdentifier(
                     "a"+value.getFour_code(),
                     "drawable",
@@ -147,7 +157,7 @@ public class Details extends Fragment {
             five_low.setText("Min Temp="+limit(value.getFive_temp_low()));
             five_day.setText(value.getFive_day());
             five_high.setText("Max Temp="+limit(value.getFive_temp_high()));
-            condition.setText(value.getFive_text());
+            condition_five.setText(value.getFive_text());
             resId = getActivity().getResources().getIdentifier(
                     "a"+value.getFive_code(),
                     "drawable",
@@ -158,7 +168,7 @@ public class Details extends Fragment {
             six_low.setText("Min Temp="+limit(value.getSix_temp_low()));
             six_day.setText(value.getSix_day());
             six_high.setText("Max Temp="+limit(value.getSix_temp_high()));
-            condition.setText(value.getSix_text());
+            condition_six.setText(value.getSix_text());
             resId = getActivity().getResources().getIdentifier(
                     "a"+value.getSix_code(),
                     "drawable",
