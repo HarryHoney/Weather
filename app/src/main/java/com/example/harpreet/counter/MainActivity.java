@@ -77,14 +77,16 @@ public class MainActivity extends AppCompatActivity {
         if(mauth.getCurrentUser()==null) {
           startActivity(new Intent(MainActivity.this,login.class));
         }
+
         Location_fragment = new Location();
         City_Fragment = new City();
         detail_fragment = new Details();
         //fragments are been set in the view pager
         fragments = new ArrayList<>();
         fragments.add(Location_fragment);
-       // fragments.add(City_Fragment);
-        fragments.add(detail_fragment);
+        //fragments.add(City_Fragment);
+        fragments.add(detail_fragment);//Fragments are been added
+
         com.example.harpreet.counter.PagerAdapter adapter1 = new com.example.harpreet.counter.PagerAdapter(getSupportFragmentManager(),fragments);
         viewPager = findViewById(R.id.main_container);
         viewPager.setAdapter(adapter1);
@@ -149,6 +151,10 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
+    /*For coloring now i need some position factors
+    so what i am going to do is tht i will save the previous as well as the current selected position
+    and make the prev position common to all but current one highlighted.
+     */
 //this function is only for on start so that null is not been set as POSITION_data
     public void function() {
         int size=adapter.getSnapshots().size();
@@ -161,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void change_Data(){
         detail_fragment.execute();
+//        City_Fragment.execute();
     }
 
     @Override
@@ -256,6 +263,7 @@ public class MainActivity extends AppCompatActivity {
            public void OnitemClick(DocumentSnapshot snapshot, int position) {
                Data data = snapshot.toObject(Data.class);
                POSITION_data=data;
+
                change_Data();
            }
        });

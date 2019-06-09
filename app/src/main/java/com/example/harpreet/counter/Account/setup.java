@@ -38,7 +38,7 @@ import java.util.HashMap;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class setup extends AppCompatActivity {
-
+// This acivity is been removed form the app due to some errors
 
     private EditText Name;
     private CircleImageView circleImageView=null;//this is been add to make the image round and github dependence is been used for it
